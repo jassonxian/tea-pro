@@ -10,7 +10,8 @@ import request from "./../utils/request.js";
 */
 export function getIndexData()
 {
-  return request.get("index",{},{ noAuth : true});
+  console.log('come1')
+  return request.get("index",{});
 }
 
 /**

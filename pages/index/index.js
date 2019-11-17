@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    modalHidden: app.globalData.modalHidden || false, // 视频弹框
     imgUrls: [],
     itemNew:[],
     activityList:[],
@@ -70,6 +71,8 @@ Page({
   getIndexConfig:function(){
     var that = this;
     getIndexData().then(res=>{
+      console.log('ssss')
+      console.log(res)
       that.setData({
         imgUrls: res.data.banner,
         menus: res.data.menus,
@@ -119,6 +122,25 @@ Page({
     this.getIndexConfig();
     if (app.globalData.isLog && app.globalData.token) this.get_issue_coupon_list();
     wx.stopPullDownRefresh();
+  },
+  /**
+   * 点击取消
+   */
+  modalCandel: function () {
+    // do something
+    this.setData({
+      modalHidden: true
+    })
+  },
+
+  /**
+    *  点击确认
+    */
+  modalConfirm: function () {
+    // do something
+    this.setData({
+      modalHidden: true
+    })
   },
 
   /**

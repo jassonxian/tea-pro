@@ -10,7 +10,7 @@ import request from "./../utils/request.js";
  * @param data object 小程序用户登陆信息
  */
 export function login(data) {
-  return request.post("wechat/mp_auth", data, { noAuth : true });
+  return request.post("wechat/login", data, { noAuth : true });
 }
 
 

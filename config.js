@@ -1,6 +1,6 @@
 module.exports = {
   // 请求域名 格式： http://您的域名
-  HTTP_REQUEST_URL:'',
+  HTTP_REQUEST_URL:'https://request.kanghua.phpna.com',
   // Socket链接 暂不做配置
   WSS_SERVER_URL:'',
   // 请求头
@@ -13,5 +13,5 @@ module.exports = {
   PINGINTERVAL:3000,
 
   // 回话密钥名称 请勿修改此配置
-  TOKENNAME: 'Authori-zation',
+  TOKENNAME: 'Authorization',
 }

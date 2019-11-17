@@ -74,6 +74,8 @@ margin-left:10rpx;}
 .index .wrapper .newProducts .item .img-box image{width:100%;height:100%;border-radius:12rpx 12rpx 0 0;}
 .index .wrapper .newProducts .item .pro-info{font-size:28rpx;color:#333;text-align:center;padding:19rpx 10rpx 0 10rpx;}
 .index .wrapper .newProducts .item .money{padding:0 10rpx 18rpx 10rpx;text-align:center;font-size:26rpx;font-weight:bold;}
-
+.w-all {
+  width: 100%;
+}
 
 

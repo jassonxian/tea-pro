@@ -9,11 +9,14 @@ export default function request(api, method, data, {noAuth = false, noVerify = f
   let Url = getApp().globalData.url, header = HEADER;
   if (!noAuth) {
     //登录过期自动登录
-    if (!util.checkLogin()) return authLogin().then(res => { return request(api, method, data, { noAuth, noVerify}); });
+    if (!util.checkLogin()) return authLogin().then(res => { 
+      console.log('come2')
+
+      return request(api, method, data, { noAuth, noVerify}); 
+      });
   }
   
   if (getApp().globalData.token) header[TOKENNAME] = 'Bearer ' + getApp().globalData.token;
-
   return new Promise((reslove, reject) => {
     wx.request({
       url: Url + '/api/' + api,
@@ -21,6 +24,8 @@ export default function request(api, method, data, {noAuth = false, noVerify = f
       header: header,
       data: data || {},
       success: (res) => {
+        console.log('come3')
+        console.log(res)
         if (noVerify)
           reslove(res.data, res);
         else if (res.data.status == 200)
